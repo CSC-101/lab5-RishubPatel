@@ -78,5 +78,11 @@ class TestCases(unittest.TestCase):
         expected = None
         self.assertEqual(result, expected)
 
+    def test_distance_1(self):
+        self.assertAlmostEqual(lab5.distance(data.Point(0, 0), data.Point(1, 1)), (2**0.5))
+
+    def test_distance_2(self):
+        self.assertAlmostEqual(lab5.distance(data.Point(0, 0), data.Point(0, 0)), 0)
+
 if __name__ == '__main__':
     unittest.main()

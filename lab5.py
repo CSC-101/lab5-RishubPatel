@@ -50,12 +50,12 @@ def largest_between(nums:list[int], lower:int, upper:int): #returns index of lar
 
 # Part 6
 
+def distance(point_1: data.Point, point_2: data.Point) -> float:  # returns distance btwn 2 points
+    return (((point_2.x - point_1.x) ** 2) + ((point_2.y - point_1.y) ** 2)) ** 0.5
+
 def furthest_from_origin(points:list[data.Point]): #returns index of furthest point from origin from list of points
     if not points: #if points = []
         return None
-
-    def distance(point_1: data.Point, point_2: data.Point) -> float:  # returns distance btwn 2 points
-        return (((point_2.x - point_1.x) ** 2) + ((point_2.y - point_1.y) ** 2)) ** 0.5
 
     origin = data.Point(0, 0)
     distances = [distance(origin, point) for point in points]
